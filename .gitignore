@@ -9,7 +9,6 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/The Final Host/Library/PackageCache/com.unity.burst@1.8.18/.Run time/libburst/-llvm-16.dylib
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
