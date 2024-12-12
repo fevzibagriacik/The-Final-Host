@@ -7,6 +7,7 @@ namespace Cainos.PixelArtTopDown_Basic
         public float speed;
 
         private Animator animator;
+
         private void Start()
         {
             animator = GetComponent<Animator>();
