@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - GravestoneB
+  - Card
   layers:
   - Default
   - TransparentFX
