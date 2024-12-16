@@ -23,6 +23,9 @@ public class GravestoneButtonManager : MonoBehaviour
         coffin.gameObject.SetActive(true);
 
         BtnPutDisenabled();
+        cardManager.BtnNextCardEnabled();
+
+        cardManager.PutControl();
     }
 
     public void BtnPutEnabled()

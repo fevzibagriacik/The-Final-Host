@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GravestoneB
   - Card
+  - Normal
+  - Rich
   layers:
   - Default
   - TransparentFX

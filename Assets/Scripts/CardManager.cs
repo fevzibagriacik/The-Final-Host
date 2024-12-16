@@ -7,7 +7,9 @@ public class CardManager : MonoBehaviour
 {
     public List<Image> cards;
 
-    private int currentIndex;
+    public int currentIndex;
+    private int startIndex = 0;
+    public int score = 0;
 
     public bool isCardActive = false;
 
@@ -20,6 +22,8 @@ public class CardManager : MonoBehaviour
     public GravestoneButtonManager buttonManager;
 
     public GameObject player;
+
+    public Text txtScore;
     private void Start()
     {
         BtnCloseCardDisenabled();
@@ -27,8 +31,17 @@ public class CardManager : MonoBehaviour
 
     public void GenerateRandomCard()
     {
-        currentIndex = Random.Range(0, cards.Count);
-        currentCard = cards[currentIndex];
+        if(startIndex <= 1)
+        {
+            currentCard = cards[2];
+            startIndex++;
+        }
+        else
+        {
+            currentIndex = Random.Range(0, cards.Count);
+            currentCard = cards[currentIndex];
+        }
+
         currentCard.gameObject.transform.position = player.transform.position;
         currentCard.gameObject.SetActive(true);
 
@@ -47,7 +60,6 @@ public class CardManager : MonoBehaviour
 
         currentCard.gameObject.SetActive(false);
 
-        BtnNextCardEnabled();
         BtnCloseCardDisenabled() ;
 
         ImgCurrentCard.gameObject.SetActive(true);
@@ -78,5 +90,14 @@ public class CardManager : MonoBehaviour
     {
         btnCloseCard.interactable = false;
         btnCloseCard.GetComponent<Image>().color = Color.gray;
+    }
+
+    public void PutControl()
+    {
+        if (currentCard.tag == "Normal")
+        {
+            score += 20;
+            txtScore.text = score.ToString();
+        }
     }
 }
