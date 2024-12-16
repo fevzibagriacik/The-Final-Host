@@ -12,7 +12,7 @@ public class GravestoneButtonManager : MonoBehaviour
     public Button btnPut;
     private void Start()
     {
-        BtnPutDisenabled();
+        btnPut.gameObject.SetActive(false);
     }
 
     public void ClickBtnPut()

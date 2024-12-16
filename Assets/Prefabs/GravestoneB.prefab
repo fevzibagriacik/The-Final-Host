@@ -535,6 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   graveStone: {fileID: 3953973333462075684}
+  cardManager: {fileID: 0}
   btnPut: {fileID: 8964147252893381372}
 --- !u!1 &6836553070741751004
 GameObject:
@@ -769,7 +770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2990889320381373866
 RectTransform:
   m_ObjectHideFlags: 0
