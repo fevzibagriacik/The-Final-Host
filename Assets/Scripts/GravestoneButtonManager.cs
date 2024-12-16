@@ -15,17 +15,34 @@ public class GravestoneButtonManager : MonoBehaviour
         btnPut.gameObject.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (cardManager.isPutable)
+        {
+            BtnPutEnabled();
+        }
+        else
+        {
+            BtnPutDisenabled();
+        }
+    }
+
     public void ClickBtnPut()
     {
-        cardManager.BtnNextCardEnabled();
+        if (cardManager.isPutable)
+        {
+            cardManager.BtnNextCardEnabled();
 
-        Transform coffin = graveStone.transform.Find("Coffin");
-        coffin.gameObject.SetActive(true);
+            Transform coffin = graveStone.transform.Find("Coffin");
+            coffin.gameObject.SetActive(true);
 
-        BtnPutDisenabled();
-        cardManager.BtnNextCardEnabled();
+            BtnPutDisenabled();
+            cardManager.BtnNextCardEnabled();
 
-        cardManager.PutControl();
+            cardManager.PutControl();
+
+            cardManager.isPutable = false;
+        }
     }
 
     public void BtnPutEnabled()

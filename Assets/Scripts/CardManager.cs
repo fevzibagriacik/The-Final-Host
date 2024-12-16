@@ -12,6 +12,7 @@ public class CardManager : MonoBehaviour
     public int score = 0;
 
     public bool isCardActive = false;
+    public bool isPutable = false;
 
     public Button btnNextCard;
     public Button btnCloseCard;
@@ -27,6 +28,8 @@ public class CardManager : MonoBehaviour
     private void Start()
     {
         BtnCloseCardDisenabled();
+
+        isPutable = false;
     }
 
     public void GenerateRandomCard()
@@ -66,6 +69,8 @@ public class CardManager : MonoBehaviour
         ImgCurrentCard.color = currentCard.color;
 
         buttonManager.BtnPutEnabled();
+
+        isPutable = true;
     }
 
     public void BtnNextCardEnabled()
@@ -97,6 +102,11 @@ public class CardManager : MonoBehaviour
         if (currentCard.tag == "Normal")
         {
             score += 20;
+            txtScore.text = score.ToString();
+        }
+        else if(currentCard.tag == "Rich")
+        {
+            score += 40;
             txtScore.text = score.ToString();
         }
     }
