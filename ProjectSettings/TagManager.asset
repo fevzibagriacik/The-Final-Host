@@ -8,6 +8,7 @@ TagManager:
   - Card
   - Normal
   - Rich
+  - Radioactive
   layers:
   - Default
   - TransparentFX

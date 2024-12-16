@@ -8,6 +8,7 @@ public class GravestoneButtonManager : MonoBehaviour
     public GameObject graveStone;
 
     public CardManager cardManager;
+    public GravestoneManager gravestoneManager;
 
     public Button btnPut;
     private void Start()
@@ -34,6 +35,7 @@ public class GravestoneButtonManager : MonoBehaviour
             cardManager.BtnNextCardEnabled();
 
             Transform coffin = graveStone.transform.Find("Coffin");
+            coffin.tag = cardManager.currentCard.tag;
             coffin.gameObject.SetActive(true);
 
             BtnPutDisenabled();
@@ -42,6 +44,11 @@ public class GravestoneButtonManager : MonoBehaviour
             cardManager.PutControl();
 
             cardManager.isPutable = false;
+
+            if(coffin.tag == "Radioactive")
+            {
+                gravestoneManager.GetAdjacentGraves(graveStone);
+            }
         }
     }
 

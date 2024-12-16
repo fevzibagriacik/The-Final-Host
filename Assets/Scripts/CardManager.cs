@@ -17,7 +17,7 @@ public class CardManager : MonoBehaviour
     public Button btnNextCard;
     public Button btnCloseCard;
 
-    private Image currentCard;
+    public Image currentCard;
     public Image ImgCurrentCard;
 
     public GravestoneButtonManager buttonManager;
