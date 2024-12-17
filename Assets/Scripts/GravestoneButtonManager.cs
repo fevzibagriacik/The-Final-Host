@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,9 @@ public class GravestoneButtonManager : MonoBehaviour
     public GravestoneManager gravestoneManager;
 
     public Button btnPut;
+
+    public bool hasRadioactive = false;
+    public bool isCoffin = false;
     private void Start()
     {
         btnPut.gameObject.SetActive(false);
@@ -18,7 +22,7 @@ public class GravestoneButtonManager : MonoBehaviour
 
     private void Update()
     {
-        if (cardManager.isPutable)
+        if (cardManager.isPutable && !isCoffin && !hasRadioactive)
         {
             BtnPutEnabled();
         }
@@ -37,6 +41,7 @@ public class GravestoneButtonManager : MonoBehaviour
             Transform coffin = graveStone.transform.Find("Coffin");
             coffin.tag = cardManager.currentCard.tag;
             coffin.gameObject.SetActive(true);
+            isCoffin = true;
 
             BtnPutDisenabled();
             cardManager.BtnNextCardEnabled();
@@ -47,7 +52,7 @@ public class GravestoneButtonManager : MonoBehaviour
 
             if(coffin.tag == "Radioactive")
             {
-                gravestoneManager.GetAdjacentGraves(graveStone);
+                gravestoneManager.applyRadioactive(gravestoneManager.GetAdjacentGraves(graveStone));
             }
         }
     }

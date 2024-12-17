@@ -9,6 +9,7 @@ TagManager:
   - Normal
   - Rich
   - Radioactive
+  - Poison
   layers:
   - Default
   - TransparentFX

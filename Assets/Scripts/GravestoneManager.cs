@@ -6,45 +6,73 @@ public class GravestoneManager : MonoBehaviour
 {
     public GameObject[] graves;
 
-    public float neighborDistance = 9f;
+    public float neighborDistance = 10f;
 
     public GravestoneButtonManager buttonManager;
+    public CardManager cardManager;
+
+    public Camera cameraa;
+
+    public bool isMorning = true;
+
+    public int dayCycle = 3;
 
     private void Start()
     {
-        graves = new GameObject[9];
+
+    }
+
+    private void Update()
+    {
+        if (isMorning)
+        {
+            dayCycle = 3;
+            TimePassed();
+        }
+    }
+
+    public void TimePassed()
+    {
+        if (isMorning)
+        {
+            isMorning = false;
+        }
+        else if (!isMorning)
+        {
+
+        }
     }
 
     public GameObject[] GetAdjacentGraves(GameObject centerGrave)
     {
-        Debug.Log(graves.Length);
-
-        GameObject[] adjacentGraves = new GameObject[5];
+        GameObject[] adjacentGraves = new GameObject[8];
 
         int count = 0;
 
         foreach (GameObject obj in graves)
         {
-            Debug.Log("obj.name");
             if (obj != centerGrave)
             {
-                Debug.Log("ff");
-                Debug.Log(centerGrave.transform.rotation);
                 float distance = Vector2.Distance(obj.transform.position, centerGrave.transform.position);
                 if (distance <= neighborDistance)
                 {
-                    Debug.Log("insideif");
-                    for(int i = 0; i < graves.Length; i++)
-                    {
-                        Debug.Log("for");
-                        adjacentGraves[i] = obj;
-                        count++;
-                    }
-                    Debug.Log(count);
+                    Debug.Log("for");
+                    adjacentGraves[count] = obj;
+                    count++;
                 }
             }
         }
 
         return adjacentGraves;
+    }
+
+    public void applyRadioactive(GameObject[] adjacentGraves)
+    {
+        foreach(GameObject obj in adjacentGraves)
+        {
+            Transform poison = obj.transform.Find("Poison");
+            poison.gameObject.SetActive(true);
+            buttonManager.hasRadioactive = true;
+        }
     }
 }
