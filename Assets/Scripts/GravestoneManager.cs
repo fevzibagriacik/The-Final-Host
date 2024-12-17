@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class GravestoneManager : MonoBehaviour
@@ -68,8 +69,18 @@ public class GravestoneManager : MonoBehaviour
 
     public void applyRadioactive(GameObject[] adjacentGraves)
     {
+        if(adjacentGraves.Length == 0 && adjacentGraves == null)
+        {
+            return;
+        }
+
         foreach(GameObject obj in adjacentGraves)
         {
+            if(obj == null)
+            {
+                continue;
+            }
+
             Transform poison = obj.transform.Find("Poison");
             poison.gameObject.SetActive(true);
             buttonManager.hasRadioactive = true;

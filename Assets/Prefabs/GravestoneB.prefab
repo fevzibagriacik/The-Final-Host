@@ -541,6 +541,7 @@ MonoBehaviour:
   gravestoneManager: {fileID: 7144429529244811123, guid: 12999951104512b48a94685fa887922b,
     type: 3}
   btnPut: {fileID: 8964147252893381372}
+  hasRadioactive: 0
   isCoffin: 0
 --- !u!1 &4470807303204143686
 GameObject:

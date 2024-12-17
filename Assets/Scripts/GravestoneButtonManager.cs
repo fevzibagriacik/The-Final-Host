@@ -22,7 +22,7 @@ public class GravestoneButtonManager : MonoBehaviour
 
     private void Update()
     {
-        if (cardManager.isPutable && !isCoffin && !hasRadioactive)
+        if (cardManager.isPutable && !isCoffin)
         {
             BtnPutEnabled();
         }
