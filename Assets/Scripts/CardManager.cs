@@ -32,6 +32,11 @@ public class CardManager : MonoBehaviour
         isPutable = false;
     }
 
+    private void Update()
+    {
+
+    }
+
     public void GenerateRandomCard()
     {
         if(startIndex <= 1)

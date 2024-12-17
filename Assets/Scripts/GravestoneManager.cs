@@ -14,9 +14,7 @@ public class GravestoneManager : MonoBehaviour
 
     public Camera cameraa;
 
-    public bool isMorning = true;
-
-    public int dayCycle = 3;
+    public int dayCycle = 0;
 
     private void Start()
     {
@@ -25,23 +23,7 @@ public class GravestoneManager : MonoBehaviour
 
     private void Update()
     {
-        if (isMorning)
-        {
-            dayCycle = 3;
-            TimePassed();
-        }
-    }
 
-    public void TimePassed()
-    {
-        if (isMorning)
-        {
-            isMorning = false;
-        }
-        else if (!isMorning)
-        {
-
-        }
     }
 
     public GameObject[] GetAdjacentGraves(GameObject centerGrave)
@@ -57,7 +39,6 @@ public class GravestoneManager : MonoBehaviour
                 float distance = Vector2.Distance(obj.transform.position, centerGrave.transform.position);
                 if (distance <= neighborDistance)
                 {
-                    Debug.Log("for");
                     adjacentGraves[count] = obj;
                     count++;
                 }
@@ -83,7 +64,6 @@ public class GravestoneManager : MonoBehaviour
 
             Transform poison = obj.transform.Find("Poison");
             poison.gameObject.SetActive(true);
-            buttonManager.hasRadioactive = true;
         }
     }
 }

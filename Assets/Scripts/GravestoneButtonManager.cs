@@ -13,8 +13,8 @@ public class GravestoneButtonManager : MonoBehaviour
 
     public Button btnPut;
 
-    public bool hasRadioactive = false;
     public bool isCoffin = false;
+
     private void Start()
     {
         btnPut.gameObject.SetActive(false);
@@ -50,7 +50,9 @@ public class GravestoneButtonManager : MonoBehaviour
 
             cardManager.isPutable = false;
 
-            if(coffin.tag == "Radioactive")
+            gravestoneManager.dayCycle++;
+
+            if (coffin.tag == "Radioactive" && gravestoneManager.dayCycle % 3 == 0)
             {
                 gravestoneManager.applyRadioactive(gravestoneManager.GetAdjacentGraves(graveStone));
             }
