@@ -73,7 +73,7 @@ public class GravestoneButtonManager : MonoBehaviour
                 whichGraveAmIIn = i;
         }
 
-        if (cardManager.isPutable && gm.holdPoisonApplyed[whichGraveAmIIn] == 0)
+        if (cardManager.isPutable && gm.holdPoisonApplyed[whichGraveAmIIn]==0 && gm.holdBurntApplyed[whichGraveAmIIn] == 0)
         {
             Debug.Log("ccccccccccccccc");
             cardManager.BtnNextCardEnabled();
@@ -93,7 +93,36 @@ public class GravestoneButtonManager : MonoBehaviour
 
             cardManager.isPutable = false;
 
-            if (coffin.tag == "Radioactive")
+
+            if (coffin.tag == "Burnt")
+            {
+                for (int count = 0; count < gm.graves.Length; count++)
+                {
+                    if (gm.graves[count].transform.position != gameObject.transform.position)
+                    {
+
+                        Debug.Log(gameObject.transform.rotation);
+                        float distance = Vector2.Distance(gm.graves[count].transform.position, gameObject.transform.position);
+
+                        Debug.Log(distance);
+                        if (distance <= gm.neighborDistance+100000000f)
+                        {
+
+                            gm.burntApplyed[count] = 1;
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("found me");
+                        Debug.Log("aaaaaa" + gm.burntApplyed[count]);
+                        gm.burntApplyed[count] = 1;
+
+                        Debug.Log("aaaaaa" + gm.burntApplyed[count]);
+                    }
+                }
+
+            }
+            else if (coffin.tag == "Radioactive")
             {
                 for (int count = 0; count < gm.graves.Length; count++)
                 {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEngine.ParticleSystem;
 
 public class GravestoneManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GravestoneManager : MonoBehaviour
     public int DayCycle = 3;
     public int[] PoisonApplyed;
     public int[] holdPoisonApplyed;
+    public int[] burntApplyed;
+    public int[] holdBurntApplyed;
 
     public string nightColor;
     public string dayColor;
@@ -36,6 +39,17 @@ public class GravestoneManager : MonoBehaviour
         {
             holdPoisonApplyed[i] = 0;
         }
+
+        burntApplyed = new int[9];
+        holdBurntApplyed = new int[9];
+        for (int i = 0; i < PoisonApplyed.Length; i++)
+        {
+            burntApplyed[i] = 0;
+        }
+        for (int i = 0; i < PoisonApplyed.Length; i++)
+        {
+            holdBurntApplyed[i] = 0;
+        }
     }
 
 
@@ -47,6 +61,7 @@ public class GravestoneManager : MonoBehaviour
             for(int i = 0; i < PoisonApplyed.Length; i++)
             {
                 holdPoisonApplyed[i] = PoisonApplyed[i];
+                holdBurntApplyed[i] = burntApplyed[i];
             }
             TimePassed();
 
@@ -122,21 +137,26 @@ public class GravestoneManager : MonoBehaviour
 
             for (int i = 0; i < graves.Length; i++)
             {
-                Transform coffin = buttonManager.graveStone.transform.Find("Coffin");
-                if (coffin.tag == "Burnt")
+                //Transform coffin = buttonManager.gameObject.transform.Find("Coffin");
+                if (burntApplyed[i] == 1)
                 {
                     Transform burnt = graves[i].transform.Find("Burnt");
-                    if(burnt.tag == "Burnt")
+                    Transform poison = graves[i].transform.Find("Poison");
+                    if (burnt.tag == "Burnt")
                     {
+                        poison.gameObject.SetActive(false);
                         burnt.gameObject.SetActive(true);
                     }
+                    
                 }
                 else if (PoisonApplyed[i] == 1)
                 {
+                    Transform burnt = graves[i].transform.Find("Burnt");
                     Transform poison = graves[i].transform.Find("Poison");
                     if (poison.tag == "Poison")
                     {
                         poison.gameObject.SetActive(true);
+                        burnt.gameObject.SetActive(false);
                     }
                 }
             }
