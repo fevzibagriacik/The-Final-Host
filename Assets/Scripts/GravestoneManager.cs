@@ -29,8 +29,8 @@ public class GravestoneManager : MonoBehaviour
     {
         //graves = new GameObject[9];
         //cameraaa.backgroundColor = Color.
-        PoisonApplyed = new int[9];
-        holdPoisonApplyed = new int[9];
+        PoisonApplyed = new int[24];
+        holdPoisonApplyed = new int[24];
         for (int i = 0; i < PoisonApplyed.Length; i++)
         {
             PoisonApplyed[i] = 0;
@@ -40,8 +40,8 @@ public class GravestoneManager : MonoBehaviour
             holdPoisonApplyed[i] = 0;
         }
 
-        burntApplyed = new int[9];
-        holdBurntApplyed = new int[9];
+        burntApplyed = new int[24];
+        holdBurntApplyed = new int[24];
         for (int i = 0; i < PoisonApplyed.Length; i++)
         {
             burntApplyed[i] = 0;
@@ -135,9 +135,10 @@ public class GravestoneManager : MonoBehaviour
             //}
             cameraaa.backgroundColor = new Color(217f, 211f, 45f, 250f);
 
+            Debug.Log(graves.Length);
             for (int i = 0; i < graves.Length; i++)
             {
-                //Transform coffin = buttonManager.gameObject.transform.Find("Coffin");
+                Debug.Log(graves[i]);
                 if (burntApplyed[i] == 1)
                 {
                     Transform burnt = graves[i].transform.Find("Burnt");
@@ -147,7 +148,6 @@ public class GravestoneManager : MonoBehaviour
                         poison.gameObject.SetActive(false);
                         burnt.gameObject.SetActive(true);
                     }
-                    
                 }
                 else if (PoisonApplyed[i] == 1)
                 {

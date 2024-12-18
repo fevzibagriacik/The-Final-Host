@@ -116,7 +116,7 @@ public class CardManager : MonoBehaviour
         }
         else if(currentCard.tag == "Burnt")
         {
-            score += 60;
+            score += 40;
             txtScore.text = score.ToString();
         }
     }

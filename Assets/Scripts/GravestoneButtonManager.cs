@@ -65,17 +65,16 @@ public class GravestoneButtonManager : MonoBehaviour
 
     public void ClickBtnPut()
     {
-        Debug.Log("clicked");
         for (int i = 0; i < gm.graves.Length; i++) 
         {
-            Debug.Log("döngüde");
             if(gm.graves[i].transform.position == gameObject.transform.position)
+            {
                 whichGraveAmIIn = i;
+            }
         }
 
         if (cardManager.isPutable && gm.holdPoisonApplyed[whichGraveAmIIn]==0 && gm.holdBurntApplyed[whichGraveAmIIn] == 0)
         {
-            Debug.Log("ccccccccccccccc");
             cardManager.BtnNextCardEnabled();
 
             Transform coffin = graveStone.transform.Find("Coffin");
@@ -96,58 +95,56 @@ public class GravestoneButtonManager : MonoBehaviour
 
             if (coffin.tag == "Burnt")
             {
-                for (int count = 0; count < gm.graves.Length; count++)
-                {
-                    if (gm.graves[count].transform.position != gameObject.transform.position)
-                    {
 
-                        Debug.Log(gameObject.transform.rotation);
-                        float distance = Vector2.Distance(gm.graves[count].transform.position, gameObject.transform.position);
-
-                        Debug.Log(distance);
-                        if (distance <= gm.neighborDistance+100000000f)
-                        {
-
-                            gm.burntApplyed[count] = 1;
-                        }
-                    }
-                    else
-                    {
-                        Debug.Log("found me");
-                        Debug.Log("aaaaaa" + gm.burntApplyed[count]);
-                        gm.burntApplyed[count] = 1;
-
-                        Debug.Log("aaaaaa" + gm.burntApplyed[count]);
-                    }
-                }
-
+                ApplyBurnt();
             }
             else if (coffin.tag == "Radioactive")
             {
-                for (int count = 0; count < gm.graves.Length; count++)
+                ApplyRadioactive();
+            }
+        }
+    }
+
+    public void ApplyBurnt()
+    {
+        for (int count = 0; count < gm.graves.Length; count++)
+        {
+            if (gm.graves[count].transform.position != gameObject.transform.position)
+            {
+                float distance = Vector2.Distance(gm.graves[count].transform.position, gameObject.transform.position);
+                if (distance <= (gm.neighborDistance + 1000f))
                 {
-                    if (gm.graves[count].transform.position != gameObject.transform.position)
-                    {
 
-                        Debug.Log(gameObject.transform.rotation);
-                        float distance = Vector2.Distance(gm.graves[count].transform.position, gameObject.transform.position);
-
-                        Debug.Log(distance);
-                        if (distance <= gm.neighborDistance)
-                        {
-
-                            gm.PoisonApplyed[count] = 1;
-                        }
-                    }
-                    else
-                    {
-                        Debug.Log("found me");
-                        Debug.Log("aaaaaa" + gm.PoisonApplyed[count]);
-                        gm.PoisonApplyed[count] = 1;
-
-                        Debug.Log("aaaaaa" + gm.PoisonApplyed[count]);
-                    }
+                    gm.burntApplyed[count] = 1;
                 }
+            }
+            else
+            {
+                gm.burntApplyed[count] = 1;
+            }
+        }
+    }
+
+    public void ApplyRadioactive()
+    {
+        for (int count = 0; count < gm.graves.Length; count++)
+        {
+            if (gm.graves[count].transform.position != gameObject.transform.position)
+            {
+
+                Debug.Log(gameObject.transform.rotation);
+                float distance = Vector2.Distance(gm.graves[count].transform.position, gameObject.transform.position);
+
+                Debug.Log(distance);
+                if (distance <= gm.neighborDistance)
+                {
+
+                    gm.PoisonApplyed[count] = 1;
+                }
+            }
+            else
+            {
+                gm.PoisonApplyed[count] = 1;
             }
         }
     }
