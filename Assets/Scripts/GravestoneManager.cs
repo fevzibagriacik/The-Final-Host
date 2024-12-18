@@ -29,8 +29,8 @@ public class GravestoneManager : MonoBehaviour
     {
         //graves = new GameObject[9];
         //cameraaa.backgroundColor = Color.
-        PoisonApplyed = new int[24];
-        holdPoisonApplyed = new int[24];
+        PoisonApplyed = new int[25];
+        holdPoisonApplyed = new int[25];
         for (int i = 0; i < PoisonApplyed.Length; i++)
         {
             PoisonApplyed[i] = 0;
@@ -40,8 +40,8 @@ public class GravestoneManager : MonoBehaviour
             holdPoisonApplyed[i] = 0;
         }
 
-        burntApplyed = new int[24];
-        holdBurntApplyed = new int[24];
+        burntApplyed = new int[25];
+        holdBurntApplyed = new int[25];
         for (int i = 0; i < PoisonApplyed.Length; i++)
         {
             burntApplyed[i] = 0;
