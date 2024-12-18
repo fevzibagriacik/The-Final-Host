@@ -10,6 +10,7 @@ TagManager:
   - Rich
   - Radioactive
   - Poison
+  - Burnt
   layers:
   - Default
   - TransparentFX

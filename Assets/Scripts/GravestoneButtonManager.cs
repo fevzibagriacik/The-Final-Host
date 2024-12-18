@@ -14,7 +14,9 @@ public class GravestoneButtonManager : MonoBehaviour
 
     public GravestoneManager gm;
 
-    public bool isCoffin = false;
+    public bool hasCoffin = false;
+
+    public int whichGraveAmIIn = -1;
 
 
     //public Camera camera;
@@ -30,7 +32,7 @@ public class GravestoneButtonManager : MonoBehaviour
 
     private void Update()
     {
-        if (cardManager.isPutable && !isCoffin)
+        if (cardManager.isPutable && !hasCoffin)
         {
             BtnPutEnabled();
         }
@@ -63,14 +65,23 @@ public class GravestoneButtonManager : MonoBehaviour
 
     public void ClickBtnPut()
     {
-        if (cardManager.isPutable)
+        Debug.Log("clicked");
+        for (int i = 0; i < gm.graves.Length; i++) 
         {
+            Debug.Log("döngüde");
+            if(gm.graves[i].transform.position == gameObject.transform.position)
+                whichGraveAmIIn = i;
+        }
+
+        if (cardManager.isPutable && gm.holdPoisonApplyed[whichGraveAmIIn] == 0)
+        {
+            Debug.Log("ccccccccccccccc");
             cardManager.BtnNextCardEnabled();
 
             Transform coffin = graveStone.transform.Find("Coffin");
             coffin.tag = cardManager.currentCard.tag;
             coffin.gameObject.SetActive(true);
-            isCoffin = true;
+            hasCoffin = true;
 
             BtnPutDisenabled();
             cardManager.BtnNextCardEnabled();
@@ -86,7 +97,6 @@ public class GravestoneButtonManager : MonoBehaviour
             {
                 for (int count = 0; count < gm.graves.Length; count++)
                 {
-
                     if (gm.graves[count].transform.position != gameObject.transform.position)
                     {
 
@@ -96,13 +106,8 @@ public class GravestoneButtonManager : MonoBehaviour
                         Debug.Log(distance);
                         if (distance <= gm.neighborDistance)
                         {
-                            Debug.Log("for");
 
-                            Debug.Log("aaaaaa" + gm.PoisonApplyed[count]);
                             gm.PoisonApplyed[count] = 1;
-
-                            Debug.Log("aaaaaa" + gm.PoisonApplyed[count]);
-
                         }
                     }
                     else

@@ -10,10 +10,12 @@ public class GravestoneManager : MonoBehaviour
     public float neighborDistance = 10f;
 
     public GravestoneButtonManager buttonManager;
+
     public Camera cameraaa;
     int day = 0;
     public int DayCycle = 3;
     public int[] PoisonApplyed;
+    public int[] holdPoisonApplyed;
 
     public string nightColor;
     public string dayColor;
@@ -25,9 +27,14 @@ public class GravestoneManager : MonoBehaviour
         //graves = new GameObject[9];
         //cameraaa.backgroundColor = Color.
         PoisonApplyed = new int[9];
+        holdPoisonApplyed = new int[9];
         for (int i = 0; i < PoisonApplyed.Length; i++)
         {
             PoisonApplyed[i] = 0;
+        }
+        for (int i = 0; i < PoisonApplyed.Length; i++)
+        {
+            holdPoisonApplyed[i] = 0;
         }
     }
 
@@ -37,6 +44,10 @@ public class GravestoneManager : MonoBehaviour
         if (DayCycle == 0)
         {
             DayCycle = 3;
+            for(int i = 0; i < PoisonApplyed.Length; i++)
+            {
+                holdPoisonApplyed[i] = PoisonApplyed[i];
+            }
             TimePassed();
 
         }
@@ -111,7 +122,16 @@ public class GravestoneManager : MonoBehaviour
 
             for (int i = 0; i < graves.Length; i++)
             {
-                if (PoisonApplyed[i] == 1)
+                Transform coffin = buttonManager.graveStone.transform.Find("Coffin");
+                if (coffin.tag == "Burnt")
+                {
+                    Transform burnt = graves[i].transform.Find("Burnt");
+                    if(burnt.tag == "Burnt")
+                    {
+                        burnt.gameObject.SetActive(true);
+                    }
+                }
+                else if (PoisonApplyed[i] == 1)
                 {
                     Transform poison = graves[i].transform.Find("Poison");
                     if (poison.tag == "Poison")
