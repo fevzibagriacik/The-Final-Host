@@ -14,6 +14,8 @@ public class GravestoneButtonManager : MonoBehaviour
 
     public GravestoneManager gm;
 
+    public bool isCoffin = false;
+
 
     //public Camera camera;
     //int day = 1;
@@ -28,7 +30,7 @@ public class GravestoneButtonManager : MonoBehaviour
 
     private void Update()
     {
-        if (cardManager.isPutable)
+        if (cardManager.isPutable && !isCoffin)
         {
             BtnPutEnabled();
         }
@@ -68,6 +70,7 @@ public class GravestoneButtonManager : MonoBehaviour
             Transform coffin = graveStone.transform.Find("Coffin");
             coffin.tag = cardManager.currentCard.tag;
             coffin.gameObject.SetActive(true);
+            isCoffin = true;
 
             BtnPutDisenabled();
             cardManager.BtnNextCardEnabled();
