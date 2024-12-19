@@ -95,6 +95,7 @@ public class GravestoneButtonManager : MonoBehaviour
             if(coffin.tag == "Glutton")
             {
                 ApplyGlutton();
+                Debug.Log("burda");
             }
             else if (coffin.tag == "Burnt")
             {
@@ -114,7 +115,7 @@ public class GravestoneButtonManager : MonoBehaviour
             if (gm.graves[count].transform.position != gameObject.transform.position)
             {
                 float distance = Vector2.Distance(gm.graves[count].transform.position, gameObject.transform.position);
-                if (distance <= (gm.neighborDistance + 1000f))
+                if (distance <= (gm.neighborDistance +1000f))
                 {
 
                     gm.burntApplyed[count] = 1;
@@ -162,7 +163,12 @@ public class GravestoneButtonManager : MonoBehaviour
                 float distance = Vector2.Distance(gm.graves[count].transform.position, gameObject.transform.position);
 
                 Debug.Log(distance);
-                if (distance <= gm.neighborDistance - 3)
+                //if (distance <= gm.neighborDistance - 3)
+                //{
+
+                //    gm.gluttonApplyed[count] = 1;
+                //}
+                if (distance <= gm.neighborDistance-3f)
                 {
 
                     gm.gluttonApplyed[count] = 1;
@@ -170,7 +176,7 @@ public class GravestoneButtonManager : MonoBehaviour
             }
             else
             {
-                gm.gluttonApplyed[count] = 1;
+                gm.gluttonApplyed[count] = 0;
             }
         }
     }

@@ -2,9 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-using static UnityEngine.ParticleSystem;
-
+using UnityEngine.UI;
 public class GravestoneManager : MonoBehaviour
 {
     public GameObject[] graves;
@@ -24,6 +22,9 @@ public class GravestoneManager : MonoBehaviour
     public int[] holdBurntApplyed;
     public int[] gluttonApplyed;
     public int[] holdGluttonApplyed;
+
+    public int[] randomHold;
+    
 
     public string nightColor;
     public string dayColor;
@@ -89,8 +90,13 @@ public class GravestoneManager : MonoBehaviour
                
                 holdGluttonApplyed[i] = gluttonApplyed[i];
             }
+            
             TimePassed();
-
+            for (int i = 0;i < gluttonApplyed.Length; i++)
+            {
+                holdGluttonApplyed[i] = 0;
+                gluttonApplyed[i] = 0;
+            }
         }
 
     }
@@ -134,7 +140,7 @@ public class GravestoneManager : MonoBehaviour
 
 
     //}
-    public void TimePassed()
+    public int TimePassed()
     {
         if (day == 1)
         {
@@ -175,12 +181,22 @@ public class GravestoneManager : MonoBehaviour
                     k++;
                     buttonManager.hasCoffin = false;
                 }*/
-                if (gluttonApplyed[i] == 1 && buttonManager.hasCoffin)
+                if (gluttonApplyed[i] == 1)
                 {
                     Debug.Log("glotton");
                     buttonManager.hasCoffin = false;
                     Transform coffin = buttonManager.graveStone.transform.Find("Coffin");
-                    coffin.gameObject.SetActive(false);
+
+                    if (holdGluttonApplyed[i] == 1)
+                    {
+                        Transform grave = graves[i].gameObject.transform.Find("Coffin");
+                        grave.tag = "Normal";
+                        // graves[i].transform.Find("EPressableArea").transform.Find("Canvas").transform.Find("btnPut").GetComponent<Button>().interactable = true;
+                        graves[i].GetComponent<GravestoneButtonManager>().hasCoffin = false;
+                        grave.gameObject.SetActive(false);
+
+                    }
+                    
                 }
                 else if (burntApplyed[i] == 1 && !isDeletedBurnt)
                 {
@@ -206,6 +222,7 @@ public class GravestoneManager : MonoBehaviour
                 }
             }
         }
+        return 1;
 
     }
 
