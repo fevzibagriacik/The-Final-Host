@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 public class GravestoneManager : MonoBehaviour
 {
@@ -10,11 +11,14 @@ public class GravestoneManager : MonoBehaviour
     public float neighborDistance = 10f;
 
     public GravestoneButtonManager buttonManager;
+    public CardManager cardManager;
 
     public Camera cameraaa;
 
     int day = 0;
     public int DayCycle = 3;
+    public int burntPrice = 100;
+    public int radyoactivePrice = 70;
 
     public int[] PoisonApplyed;
     public int[] holdPoisonApplyed;
@@ -228,47 +232,68 @@ public class GravestoneManager : MonoBehaviour
 
     public void DeleteBurnt()
     {
-        isDeletedBurnt = true;
-        isDeletedPoison = true;
-        for(int i = 0; i < graves.Length; i++)
+        if (cardManager.score >= burntPrice)
         {
-            if (burntApplyed[i] == 1)
+
+            cardManager.score -= burntPrice;
+            cardManager.txtScore.text = cardManager.score.ToString();
+            isDeletedBurnt = true;
+            isDeletedPoison = true;
+            for (int i = 0; i < graves.Length; i++)
             {
-                Transform burnt = graves[i].transform.Find("Burnt");
-                Transform poison = graves[i].transform.Find("Poison");
-                Transform coffin = graves[i].transform.Find("Coffin");
-                if(burnt.tag == "Burnt")
+                if (burntApplyed[i] == 1)
                 {
-                    coffin.tag = "Normal";
-                    burnt.gameObject.SetActive(false);
-                    burntApplyed[i] = 0;
-                    holdBurntApplyed[i] = 0;
+                    Transform burnt = graves[i].transform.Find("Burnt");
+                    Transform poison = graves[i].transform.Find("Poison");
+                    Transform coffin = graves[i].transform.Find("Coffin");
+                    if (burnt.tag == "Burnt")
+                    {
+                        coffin.tag = "Normal";
+                        burnt.gameObject.SetActive(false);
+                        burntApplyed[i] = 0;
+                        holdBurntApplyed[i] = 0;
+                    }
                 }
             }
+            isDeletedBurnt = false;
+            isDeletedPoison = false;
         }
-        isDeletedBurnt = false;
-        isDeletedPoison = false;
+        else
+        {
+            return;
+        }
+        
+
     }
 
     public void DeleteRadioactive()
     {
-        isDeletedPoison = true;
-        for (int i = 0; i < graves.Length; i++)
+        if(cardManager.score >= radyoactivePrice)
         {
-            if (PoisonApplyed[i] == 1)
+            cardManager.score -= radyoactivePrice;
+            cardManager.txtScore.text = cardManager.score.ToString();
+            isDeletedPoison = true;
+            for (int i = 0; i < graves.Length; i++)
             {
-                Transform burnt = graves[i].transform.Find("Burnt");
-                Transform poison = graves[i].transform.Find("Poison");
-                Transform coffin = graves[i].transform.Find("Coffin");
-                if (poison.tag == "Poison")
+                if (PoisonApplyed[i] == 1)
                 {
-                    coffin.tag = "Normal";
-                    poison.gameObject.SetActive(false);
-                    PoisonApplyed[i] = 0;
-                    holdPoisonApplyed[i] = 0;
+                    Transform burnt = graves[i].transform.Find("Burnt");
+                    Transform poison = graves[i].transform.Find("Poison");
+                    Transform coffin = graves[i].transform.Find("Coffin");
+                    if (poison.tag == "Poison")
+                    {
+                        coffin.tag = "Normal";
+                        poison.gameObject.SetActive(false);
+                        PoisonApplyed[i] = 0;
+                        holdPoisonApplyed[i] = 0;
+                    }
                 }
             }
+            isDeletedPoison = false;
         }
-        isDeletedPoison = false;
+        else
+        {
+            return;
+        }
     }
 }
