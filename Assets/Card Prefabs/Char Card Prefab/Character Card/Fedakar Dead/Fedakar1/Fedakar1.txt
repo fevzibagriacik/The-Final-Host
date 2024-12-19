@@ -1,0 +1,7 @@
+Ölü Sınıfı : Fedakar Ölü
+İsim-Soyisim : Brain Skalper
+Ölüm Sebebi : Silahlı saldırıda hayatını kaybetmiş(Oğlunu korurken).
+Kart Derecesi : Yeşil
+Özelliği : Kendi canı karşılığında istenilen bir zamanda kendini feda eder.
+Seçtiğimiz yeşil bir kartın özelliğini bir kere daha kullanabilmesini sağlar ve mezarı boşalır. 
+Gelir : ?

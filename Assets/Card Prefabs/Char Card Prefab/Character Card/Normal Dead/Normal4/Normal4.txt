@@ -1,0 +1,6 @@
+Ölü Sınıfı : Normal Ölü
+İsim-Soyisim : Emine parasız
+Ölüm Sebebi : Organ mafyasının kaçırması sonrasında öldürüldü.
+Kart Derecesi : Yeşil
+Özelliği : —
+Gelir : 20

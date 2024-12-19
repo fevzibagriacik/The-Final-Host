@@ -1,0 +1,6 @@
+Ölü Sınıfı : Obur Ölü
+İsim-Soyisim : Tevfik Sakallı
+Ölüm Sebebi : Tren felaketinde parçalara ayrılarak öldü.
+Kart Derecesi : Yeşil
+Özelliği : Yanındaki mezarlardan birini tek seferlik yiyerek o mezardaki ölüyü ortadan kaldırır ve mezar boş kalır.
+Gelir : ?

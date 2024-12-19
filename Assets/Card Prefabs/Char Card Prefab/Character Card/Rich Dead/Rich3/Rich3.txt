@@ -1,0 +1,6 @@
+Ölü Sınıfı : Zengin Ölü
+İsim-Soyisim : Kral Verishek II
+Ölüm Sebebi : Zehirlenerek öldürüldü.
+Kart Derecesi : Yeşil
+Özelliği : Gömüldüğünde fazla miktarda para verir. 
+Gelir : 40

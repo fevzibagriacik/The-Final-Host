@@ -1,0 +1,6 @@
+Ölü Sınıfı : Şanssız Ölü
+İsim-Soyisim : Pelin Paratoner
+Ölüm Sebebi : Yıldırım çarpması sonucu patlayarak öldü.
+Kart Derecesi : Sarı
+Özelliği : Bir sonraki turda sarı ya da kırmızı kart gelmesini sağlar.  
+Gelir : ?

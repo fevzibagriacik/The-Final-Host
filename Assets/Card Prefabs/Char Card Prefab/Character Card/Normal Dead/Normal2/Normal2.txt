@@ -1,0 +1,6 @@
+Ölü Sınıfı : Normal Ölü
+İsim-Soyisim : Metin Tarhana
+Ölüm Sebebi : Sokakta müzik yaparken tartıştığı adam tarafından bıçaklanarak öldü.
+Kart Derecesi : Yeşil
+Özelliği : —
+Gelir : 20

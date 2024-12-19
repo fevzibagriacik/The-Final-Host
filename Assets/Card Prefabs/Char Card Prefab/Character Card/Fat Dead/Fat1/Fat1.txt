@@ -1,0 +1,6 @@
+Ölü Sınıfı : Obur Ölü
+İsim-Soyisim : Niyazi Kocagöbek
+Ölüm Sebebi : Fazla yemek yemeden dolayı kalp krizi geçirdi.
+Kart Derecesi : Yeşil
+Özelliği : Yanındaki mezarlardan birini tek seferlik yiyerek o mezardaki ölüyü ortadan kaldırır ve mezar boş kalır.
+Gelir : ?

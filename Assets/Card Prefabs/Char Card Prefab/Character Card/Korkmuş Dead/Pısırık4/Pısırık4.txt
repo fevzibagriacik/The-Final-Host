@@ -1,0 +1,6 @@
+Ölü Sınıfı : Pısırık Ölü
+İsim-Soyisim : Felix Monroe
+Ölüm Sebebi : Konserde gitar çalarken kalabalık karşısında çok heyecanlanıp kalp krizi geçirerek ölür.
+Kart Derecesi : Sarı
+Özelliği : Yanına kırmızı veya sarı kart gelirse çığlık atar. 
+Gelir : ?

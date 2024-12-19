@@ -1,0 +1,6 @@
+Ölü Sınıfı : Normal Ölü
+İsim-Soyisim : Mahmut Ettenbacak
+Ölüm Sebebi : Etleri doğrarken kolunu keserek kan kaybından ölür.
+Kart Derecesi : Yeşil
+Özelliği : —
+Gelir : 20

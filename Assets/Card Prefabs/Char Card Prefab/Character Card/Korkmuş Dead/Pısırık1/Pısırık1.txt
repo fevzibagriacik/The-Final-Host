@@ -1,0 +1,6 @@
+Ölü Sınıfı : Pısırık Ölü
+İsim-Soyisim : Amelia Foster
+Ölüm Sebebi : Kaybolduğu ormanda kendisini arayan insanlardan korkup kaçarken uçurumdan düşerek ölür.
+Kart Derecesi : Sarı
+Özelliği : Yanına kırmızı veya sarı kart gelirse çığlık atar. 
+Gelir : ?

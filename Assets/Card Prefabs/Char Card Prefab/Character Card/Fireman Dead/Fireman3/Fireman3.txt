@@ -1,0 +1,6 @@
+Ölü Sınıfı : Yanmış Ölü
+İsim-Soyisim : Polat Mahmutoğlu
+Ölüm Sebebi : Meteor düşmesi sonucu yanan bir köyü söndürürken ölür.
+Kart Derecesi : Kırmızı
+Özelliği : Geldiği gece her mezarı yakar ve yangına sebep olur. Yangına müdahale edilmediği takdirde oyun sonlanır. 
+Gelir : ?

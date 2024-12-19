@@ -1,0 +1,7 @@
+Ölü Sınıfı : Fedakar Ölü
+İsim-Soyisim : Sophia Fischer
+Ölüm Sebebi : Böbrek yetmezliği sonucunda hayata gözlerini yumdu.
+Kart Derecesi : Yeşil
+Özelliği : Kendi canı karşılığında istenilen bir zamanda kendini feda eder.
+Seçtiğimiz yeşil bir kartın özelliğini bir kere daha kullanabilmesini sağlar ve mezarı boşalır. 
+Gelir : ?

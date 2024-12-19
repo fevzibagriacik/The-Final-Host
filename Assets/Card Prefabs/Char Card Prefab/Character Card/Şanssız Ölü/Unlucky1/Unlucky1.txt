@@ -1,0 +1,6 @@
+Ölü Sınıfı : Şanssız Ölü
+İsim-Soyisim : Ahmet Ahmetoğlu
+Ölüm Sebebi : Muz kabuğuna basıp düşerek ölür.
+Kart Derecesi : Sarı
+Özelliği : Bir sonraki turda sarı ya da kırmızı kart gelmesini sağlar.  
+Gelir : ?

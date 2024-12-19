@@ -1,0 +1,6 @@
+Ölü Sınıfı : Şanssız Ölü
+İsim-Soyisim : Kenan Kola
+Ölüm Sebebi : Yağmurlu havada koşarken ayağının kayması sonucu kafa üstü çakılır ve ölür.
+Kart Derecesi : Sarı
+Özelliği : Bir sonraki turda sarı ya da kırmızı kart gelmesini sağlar.  
+Gelir : ?

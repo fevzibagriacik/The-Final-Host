@@ -1,0 +1,6 @@
+Ölü Sınıfı : Zengin Ölü
+İsim-Soyisim : Kral Zarek IV
+Ölüm Sebebi : Bir sefer sırasında hastalanarak öldü.
+Kart Derecesi : Yeşil
+Özelliği : Gömüldüğünde fazla miktarda para verir. 
+Gelir : 40

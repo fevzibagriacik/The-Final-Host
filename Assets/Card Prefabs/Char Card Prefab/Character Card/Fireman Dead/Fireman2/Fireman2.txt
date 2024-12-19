@@ -1,0 +1,6 @@
+Ölü Sınıfı : Yanmış Ölü
+İsim-Soyisim : Ron Kiramman
+Ölüm Sebebi : Volkan patlaması sırasında arazideki insanları kurtarırken ölür.
+Kart Derecesi : Kırmızı
+Özelliği : Geldiği gece her mezarı yakar ve yangına sebep olur. Yangına müdahale edilmediği takdirde oyun sonlanır. 
+Gelir : ?

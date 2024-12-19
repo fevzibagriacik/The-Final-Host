@@ -1,0 +1,6 @@
+Ölü Sınıfı : Zengin Ölü
+İsim-Soyisim : Kral Darian
+Ölüm Sebebi : Suikaste uğrayarak öldü.
+Kart Derecesi : Yeşil
+Özelliği : Gömüldüğünde fazla miktarda para verir. 
+Gelir : 40

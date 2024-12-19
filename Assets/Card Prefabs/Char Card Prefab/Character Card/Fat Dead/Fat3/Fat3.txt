@@ -1,0 +1,6 @@
+Ölü Sınıfı : Obur Ölü
+İsim-Soyisim : Bünyamin Tok
+Ölüm Sebebi : Fazla içki içmeden kaynaklı içki komasından dolayı hayatını kaybetti.
+Kart Derecesi : Yeşil
+Özelliği : Yanındaki mezarlardan birini tek seferlik yiyerek o mezardaki ölüyü ortadan kaldırır ve mezar boş kalır.
+Gelir : ?

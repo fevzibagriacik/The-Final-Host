@@ -1,0 +1,6 @@
+Ölü Sınıfı : Zengin Ölü
+İsim-Soyisim : Firavun Khafre ( Kefren )
+Ölüm Sebebi : Organ yetmezliğinden dolayı öldü.
+Kart Derecesi : Yeşil
+Özelliği : Gömüldüğünde fazla miktarda para verir. 
+Gelir : 40

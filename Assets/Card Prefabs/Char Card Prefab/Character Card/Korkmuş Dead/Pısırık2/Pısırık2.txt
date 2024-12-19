@@ -1,0 +1,6 @@
+Ölü Sınıfı : Pısırık Ölü
+İsim-Soyisim : Marta Dupont
+Ölüm Sebebi : Mutfağında gördüğü fareden kaçarken merdivenlerden düşerek öldü.
+Kart Derecesi : Sarı
+Özelliği : Yanına kırmızı veya sarı kart gelirse çığlık atar. 
+Gelir : ?

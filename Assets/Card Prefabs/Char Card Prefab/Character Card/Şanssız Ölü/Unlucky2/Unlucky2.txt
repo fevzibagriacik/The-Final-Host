@@ -1,0 +1,6 @@
+Ölü Sınıfı : Şanssız Ölü
+İsim-Soyisim : Yusuf Küçük 
+Ölüm Sebebi : Rüzgarda uçup savrulduktan sonra yere çakılma sonrası hayatını kaybetti.
+Kart Derecesi : Sarı
+Özelliği : Bir sonraki turda sarı ya da kırmızı kart gelmesini sağlar.  
+Gelir : ?

@@ -1,0 +1,6 @@
+Ölü Sınıfı : Yanmış Ölü
+İsim-Soyisim : Bilinmiyor
+Ölüm Sebebi : Bilinmiyor (Sadece yanmış bir ceset bulundu).
+Kart Derecesi : Kırmızı
+Özelliği : Geldiği gece her mezarı yakar ve yangına sebep olur. Yangına müdahale edilmediği takdirde oyun sonlanır. 
+Gelir : ?

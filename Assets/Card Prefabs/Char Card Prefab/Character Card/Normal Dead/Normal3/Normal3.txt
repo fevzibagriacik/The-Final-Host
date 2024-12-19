@@ -1,0 +1,6 @@
+Ölü Sınıfı : Normal Ölü
+İsim-Soyisim : Karun Taş
+Ölüm Sebebi : Taş madenindeki kazada ezilerek öldü
+Kart Derecesi : Yeşil
+Özelliği : —
+Gelir : 20

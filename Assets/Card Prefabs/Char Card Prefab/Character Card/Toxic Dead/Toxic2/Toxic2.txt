@@ -1,0 +1,7 @@
+Ölü Sınıfı : Radyoaktif Ölü
+İsim-Soyisim : Wilhelm Krause
+Ölüm Sebebi : Yıllarca çalıştığı kimya fabrikasında zehirli sıvı havuzuna düşerek ölür.
+Kart Derecesi : Sarı
+Özelliği : Radyoaktif gaz salar ve gerekli ilaç kullanılmadığı takdirde her yöne doğru
+her gece bir birim gazı ilerleterek mezarlığa ölü yerleştirmemizi o birimler içerisinde engeller. 
+Gelir : 40

@@ -1,0 +1,6 @@
+Ölü Sınıfı : Pısırık Ölü
+İsim-Soyisim : Emily Wren
+Ölüm Sebebi : Bilinmiyor
+Kart Derecesi : Sarı
+Özelliği : Yanına kırmızı veya sarı kart gelirse çığlık atar. 
+Gelir : ?

@@ -1,0 +1,6 @@
+Ölü Sınıfı : Obur Ölü
+İsim-Soyisim : Nuri Pasaklı
+Ölüm Sebebi : Yemek yeme yarışmasında dilini yutması sonucu boğularak öldü.
+Kart Derecesi : Yeşil
+Özelliği : Yanındaki mezarlardan birini tek seferlik yiyerek o mezardaki ölüyü ortadan kaldırır ve mezar boş kalır.
+Gelir : ?

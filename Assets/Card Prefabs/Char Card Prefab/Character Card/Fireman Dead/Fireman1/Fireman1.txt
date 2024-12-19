@@ -1,0 +1,6 @@
+Ölü Sınıfı : Yanmış Ölü
+İsim-Soyisim : Cemil Sarıayak
+Ölüm Sebebi : Büyük bir orman yangınında yanmakta olan bir ağacın üzerine devrilmesi sonucu yanarak öldü.
+Kart Derecesi : Kırmızı
+Özelliği : Geldiği gece her mezarı yakar ve yangına sebep olur. Yangına müdahale edilmediği takdirde oyun sonlanır. 
+Gelir : ?
