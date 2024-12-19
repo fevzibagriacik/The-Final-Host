@@ -41,7 +41,11 @@ public class CardManager : MonoBehaviour
     {
         if(startIndex <= 1)
         {
-            currentCard = cards[2];
+            /*currentCard = cards[2];
+            startIndex++;*/
+
+            currentIndex = Random.Range(0, 3);
+            currentCard = cards[currentIndex];
             startIndex++;
         }
         else
@@ -115,6 +119,16 @@ public class CardManager : MonoBehaviour
             txtScore.text = score.ToString();
         }
         else if(currentCard.tag == "Burnt")
+        {
+            score += 40;
+            txtScore.text = score.ToString();
+        }
+        else if(currentCard.tag == "Glutton")
+        {
+            score += 30;
+            txtScore.text = score.ToString();
+        }
+        else if(currentCard.tag == "Radioactive")
         {
             score += 40;
             txtScore.text = score.ToString();

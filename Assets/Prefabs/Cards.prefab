@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 960542954569430247}
   - component: {fileID: 7106383234318137564}
   m_Layer: 20
-  m_Name: Image (12)
+  m_Name: Normal4
   m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 853719434789496729}
   - component: {fileID: 3246413141300228304}
   m_Layer: 20
-  m_Name: Image (15)
+  m_Name: Rich4
   m_TagString: Rich
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,8 +316,8 @@ GameObject:
   - component: {fileID: 9054073303975720405}
   - component: {fileID: 4624343340366679455}
   m_Layer: 20
-  m_Name: Image (7)
-  m_TagString: Card
+  m_Name: Radioactive2
+  m_TagString: Radioactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,6 +379,81 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2077388365159761669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5360301822878640132}
+  - component: {fileID: 2848719653683448885}
+  - component: {fileID: 6357966290414568684}
+  m_Layer: 20
+  m_Name: Glutton3
+  m_TagString: Glutton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &5360301822878640132
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077388365159761669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8299300154637690475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -21.81, y: -5.6}
+  m_SizeDelta: {x: 5.5234, y: 8.282}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2848719653683448885
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077388365159761669}
+  m_CullTransparentMesh: 1
+--- !u!114 &6357966290414568684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077388365159761669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15294118, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2872843311986904360
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +466,7 @@ GameObject:
   - component: {fileID: 1397789937404248707}
   - component: {fileID: 8207687399947718995}
   m_Layer: 20
-  m_Name: Image (3)
+  m_Name: Rich
   m_TagString: Rich
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -438,6 +513,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.15457404, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3577604856702400118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4736084552560607265}
+  - component: {fileID: 4977717040258182996}
+  - component: {fileID: 7374299171550741733}
+  m_Layer: 20
+  m_Name: Glutton4
+  m_TagString: Glutton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &4736084552560607265
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577604856702400118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8299300154637690475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -21.81, y: -5.6}
+  m_SizeDelta: {x: 5.5234, y: 8.282}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4977717040258182996
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577604856702400118}
+  m_CullTransparentMesh: 1
+--- !u!114 &7374299171550741733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577604856702400118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15294118, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -599,7 +749,7 @@ GameObject:
   - component: {fileID: 1958145701493841609}
   - component: {fileID: 8552102209678476274}
   m_Layer: 20
-  m_Name: Image (2)
+  m_Name: Normal
   m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,8 +824,8 @@ GameObject:
   - component: {fileID: 3629087400261159808}
   - component: {fileID: 6893576641671510934}
   m_Layer: 20
-  m_Name: Image (9)
-  m_TagString: Card
+  m_Name: Radioactive4
+  m_TagString: Radioactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,8 +899,8 @@ GameObject:
   - component: {fileID: 7245202853530928627}
   - component: {fileID: 2103691563007033704}
   m_Layer: 20
-  m_Name: Image (4)
-  m_TagString: Card
+  m_Name: Burnt2
+  m_TagString: Burnt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -970,8 +1120,8 @@ GameObject:
   - component: {fileID: 3067682344292023708}
   - component: {fileID: 7695218611279493422}
   m_Layer: 20
-  m_Name: Image (5)
-  m_TagString: Card
+  m_Name: Burnt3
+  m_TagString: Burnt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1033,6 +1183,81 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5672669170627237756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3134684148322726444}
+  - component: {fileID: 7177485971352360526}
+  - component: {fileID: 2915034379468639458}
+  m_Layer: 20
+  m_Name: Glutton2
+  m_TagString: Glutton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &3134684148322726444
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672669170627237756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8299300154637690475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -21.81, y: -5.6}
+  m_SizeDelta: {x: 5.5234, y: 8.282}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7177485971352360526
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672669170627237756}
+  m_CullTransparentMesh: 1
+--- !u!114 &2915034379468639458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672669170627237756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15294118, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6112850763789146712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1270,7 @@ GameObject:
   - component: {fileID: 2401275592348608325}
   - component: {fileID: 7110626995888574433}
   m_Layer: 20
-  m_Name: Image (14)
+  m_Name: Rich3
   m_TagString: Rich
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1199,8 +1424,8 @@ GameObject:
   - component: {fileID: 7526670666344831299}
   - component: {fileID: 6245982550505854599}
   m_Layer: 20
-  m_Name: Image (1)
-  m_TagString: Card
+  m_Name: Radioactive
+  m_TagString: Radioactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1274,8 +1499,8 @@ GameObject:
   - component: {fileID: 4256218069511361344}
   - component: {fileID: 780600723001077989}
   m_Layer: 20
-  m_Name: Image (8)
-  m_TagString: Card
+  m_Name: Radioactive3
+  m_TagString: Radioactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1372,6 +1597,10 @@ RectTransform:
   - {fileID: 6625245428269668635}
   - {fileID: 2173407540472530894}
   - {fileID: 6356035689330665209}
+  - {fileID: 8900205588655087114}
+  - {fileID: 3134684148322726444}
+  - {fileID: 5360301822878640132}
+  - {fileID: 4736084552560607265}
   - {fileID: 1716475766817292355}
   - {fileID: 3075100481798432774}
   - {fileID: 3712044916990320600}
@@ -1466,8 +1695,8 @@ GameObject:
   - component: {fileID: 4898557013801290201}
   - component: {fileID: 1062279478622364430}
   m_Layer: 20
-  m_Name: Image (6)
-  m_TagString: Card
+  m_Name: Burnt4
+  m_TagString: Burnt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1645,7 +1874,7 @@ GameObject:
   - component: {fileID: 1144083883574459639}
   - component: {fileID: 5720391568406445032}
   m_Layer: 20
-  m_Name: Image (13)
+  m_Name: Rich2
   m_TagString: Rich
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,6 +1937,81 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8019266986530329229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8900205588655087114}
+  - component: {fileID: 7316397983542315829}
+  - component: {fileID: 6378618877513430726}
+  m_Layer: 20
+  m_Name: Glutton
+  m_TagString: Glutton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &8900205588655087114
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019266986530329229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8299300154637690475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -21.81, y: -5.6}
+  m_SizeDelta: {x: 5.5234, y: 8.282}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7316397983542315829
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019266986530329229}
+  m_CullTransparentMesh: 1
+--- !u!114 &6378618877513430726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019266986530329229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15294118, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8555710808665975020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,8 +2024,8 @@ GameObject:
   - component: {fileID: 5592831651314892182}
   - component: {fileID: 891722954568539882}
   m_Layer: 20
-  m_Name: Image
-  m_TagString: Card
+  m_Name: Burnt
+  m_TagString: Burnt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1830,22 +2134,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards:
-  - {fileID: 891722954568539882}
-  - {fileID: 6245982550505854599}
   - {fileID: 8552102209678476274}
+  - {fileID: 5998191751220169734}
+  - {fileID: 946812194364383018}
+  - {fileID: 7106383234318137564}
+  - {fileID: 891722954568539882}
+  - {fileID: 2103691563007033704}
+  - {fileID: 7695218611279493422}
+  - {fileID: 1062279478622364430}
+  - {fileID: 6378618877513430726}
+  - {fileID: 2915034379468639458}
+  - {fileID: 6357966290414568684}
+  - {fileID: 7374299171550741733}
+  - {fileID: 6245982550505854599}
+  - {fileID: 4624343340366679455}
+  - {fileID: 780600723001077989}
+  - {fileID: 6893576641671510934}
   - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
-  - {fileID: 8207687399947718995}
+  - {fileID: 5720391568406445032}
+  - {fileID: 7110626995888574433}
+  - {fileID: 3246413141300228304}
   currentIndex: 0
   score: 0
   isCardActive: 0
@@ -1870,7 +2178,7 @@ GameObject:
   - component: {fileID: 9195263602455447576}
   - component: {fileID: 946812194364383018}
   m_Layer: 20
-  m_Name: Image (11)
+  m_Name: Normal3
   m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1945,7 +2253,7 @@ GameObject:
   - component: {fileID: 2658212201577185941}
   - component: {fileID: 5998191751220169734}
   m_Layer: 20
-  m_Name: Image (10)
+  m_Name: Normal2
   m_TagString: Normal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

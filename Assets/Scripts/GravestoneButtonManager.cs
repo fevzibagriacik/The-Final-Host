@@ -92,10 +92,12 @@ public class GravestoneButtonManager : MonoBehaviour
 
             cardManager.isPutable = false;
 
-
-            if (coffin.tag == "Burnt")
+            if(coffin.tag == "Glutton")
             {
-
+                ApplyGlutton();
+            }
+            else if (coffin.tag == "Burnt")
+            {
                 ApplyBurnt();
             }
             else if (coffin.tag == "Radioactive")
@@ -148,6 +150,32 @@ public class GravestoneButtonManager : MonoBehaviour
             }
         }
     }
+
+    public void ApplyGlutton()
+    {
+        for (int count = 0; count < gm.graves.Length; count++)
+        {
+            if (gm.graves[count].transform.position != gameObject.transform.position)
+            {
+
+                Debug.Log(gameObject.transform.rotation);
+                float distance = Vector2.Distance(gm.graves[count].transform.position, gameObject.transform.position);
+
+                Debug.Log(distance);
+                if (distance <= gm.neighborDistance - 3)
+                {
+
+                    gm.gluttonApplyed[count] = 1;
+                }
+            }
+            else
+            {
+                gm.gluttonApplyed[count] = 1;
+            }
+        }
+    }
+
+
 
     public void BtnPutEnabled()
     {

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,15 +14,22 @@ public class GravestoneManager : MonoBehaviour
     public GravestoneButtonManager buttonManager;
 
     public Camera cameraaa;
+
     int day = 0;
     public int DayCycle = 3;
+
     public int[] PoisonApplyed;
     public int[] holdPoisonApplyed;
     public int[] burntApplyed;
     public int[] holdBurntApplyed;
+    public int[] gluttonApplyed;
+    public int[] holdGluttonApplyed;
 
     public string nightColor;
     public string dayColor;
+
+    public bool isDeletedBurnt = false;
+    public bool isDeletedPoison = false;
 
     Color backgroundColor;
 
@@ -50,6 +58,17 @@ public class GravestoneManager : MonoBehaviour
         {
             holdBurntApplyed[i] = 0;
         }
+
+        gluttonApplyed = new int[25];
+        holdGluttonApplyed = new int[25];
+        for (int i = 0; i < gluttonApplyed.Length; i++)
+        {
+            gluttonApplyed[i] = 0;
+        }
+        for (int i = 0; i < gluttonApplyed.Length; i++)
+        {
+            holdGluttonApplyed[i] = 0;
+        }
     }
 
 
@@ -60,8 +79,15 @@ public class GravestoneManager : MonoBehaviour
             DayCycle = 3;
             for(int i = 0; i < PoisonApplyed.Length; i++)
             {
-                holdPoisonApplyed[i] = PoisonApplyed[i];
-                holdBurntApplyed[i] = burntApplyed[i];
+                if (!isDeletedBurnt)
+                {
+                    holdBurntApplyed[i] = burntApplyed[i];
+                }
+
+                if(!isDeletedPoison)
+                    holdPoisonApplyed[i] = PoisonApplyed[i];
+               
+                holdGluttonApplyed[i] = gluttonApplyed[i];
             }
             TimePassed();
 
@@ -135,12 +161,30 @@ public class GravestoneManager : MonoBehaviour
             //}
             cameraaa.backgroundColor = new Color(217f, 211f, 45f, 250f);
 
+            
+
             Debug.Log(graves.Length);
             for (int i = 0; i < graves.Length; i++)
             {
                 Debug.Log(graves[i]);
-                if (burntApplyed[i] == 1)
+                /*if(gluttonApplyed[i] == 1)
                 {
+                    /*int k = 1;
+                    int[] gluttonApplyedTrue = new int[k];
+                    int rnd = Random.Range(0, k);
+                    k++;
+                    buttonManager.hasCoffin = false;
+                }*/
+                if (gluttonApplyed[i] == 1 && buttonManager.hasCoffin)
+                {
+                    Debug.Log("glotton");
+                    buttonManager.hasCoffin = false;
+                    Transform coffin = buttonManager.graveStone.transform.Find("Coffin");
+                    coffin.gameObject.SetActive(false);
+                }
+                else if (burntApplyed[i] == 1 && !isDeletedBurnt)
+                {
+                    Transform coffin = buttonManager.graveStone.transform.Find("Coffin");
                     Transform burnt = graves[i].transform.Find("Burnt");
                     Transform poison = graves[i].transform.Find("Poison");
                     if (burnt.tag == "Burnt")
@@ -149,8 +193,9 @@ public class GravestoneManager : MonoBehaviour
                         burnt.gameObject.SetActive(true);
                     }
                 }
-                else if (PoisonApplyed[i] == 1)
+                else if (PoisonApplyed[i] == 1 && !isDeletedPoison && !isDeletedBurnt)
                 {
+                    Transform coffin = buttonManager.graveStone.transform.Find("Coffin");
                     Transform burnt = graves[i].transform.Find("Burnt");
                     Transform poison = graves[i].transform.Find("Poison");
                     if (poison.tag == "Poison")
@@ -164,4 +209,49 @@ public class GravestoneManager : MonoBehaviour
 
     }
 
+    public void DeleteBurnt()
+    {
+        isDeletedBurnt = true;
+        isDeletedPoison = true;
+        for(int i = 0; i < graves.Length; i++)
+        {
+            if (burntApplyed[i] == 1)
+            {
+                Transform burnt = graves[i].transform.Find("Burnt");
+                Transform poison = graves[i].transform.Find("Poison");
+                Transform coffin = graves[i].transform.Find("Coffin");
+                if(burnt.tag == "Burnt")
+                {
+                    coffin.tag = "Normal";
+                    burnt.gameObject.SetActive(false);
+                    burntApplyed[i] = 0;
+                    holdBurntApplyed[i] = 0;
+                }
+            }
+        }
+        isDeletedBurnt = false;
+        isDeletedPoison = false;
+    }
+
+    public void DeleteRadioactive()
+    {
+        isDeletedPoison = true;
+        for (int i = 0; i < graves.Length; i++)
+        {
+            if (PoisonApplyed[i] == 1)
+            {
+                Transform burnt = graves[i].transform.Find("Burnt");
+                Transform poison = graves[i].transform.Find("Poison");
+                Transform coffin = graves[i].transform.Find("Coffin");
+                if (poison.tag == "Poison")
+                {
+                    coffin.tag = "Normal";
+                    poison.gameObject.SetActive(false);
+                    PoisonApplyed[i] = 0;
+                    holdPoisonApplyed[i] = 0;
+                }
+            }
+        }
+        isDeletedPoison = false;
+    }
 }
