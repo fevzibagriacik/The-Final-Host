@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
-    public List<Image> cards;
+    public List<GameObject> cards;
 
     public int currentIndex;
     private int startIndex = 0;
@@ -17,14 +17,19 @@ public class CardManager : MonoBehaviour
     public Button btnNextCard;
     public Button btnCloseCard;
 
-    public Image currentCard;
-    public Image ImgCurrentCard;
+    public GameObject currentCard;
+    //public GameObject smallCurrentCard;
 
     public GravestoneButtonManager buttonManager;
 
     public GameObject player;
 
     public Text txtScore;
+
+    public AudioSource cardOpenPlayer;
+    public AudioSource cardClosePlayer;
+
+    //public Vector3 smallScale = new Vector3(3f, 3f, 0);
     private void Start()
     {
         BtnCloseCardDisenabled();
@@ -39,6 +44,7 @@ public class CardManager : MonoBehaviour
 
     public void GenerateRandomCard()
     {
+        cardOpenPlayer.Play();
         if(startIndex <= 1)
         {
             /*currentCard = cards[2];
@@ -54,28 +60,33 @@ public class CardManager : MonoBehaviour
             currentCard = cards[currentIndex];
         }
 
-        currentCard.gameObject.transform.position = player.transform.position;
-        currentCard.gameObject.SetActive(true);
+        currentCard.transform.position = player.transform.position;
+        currentCard.SetActive(true);
 
         BtnNextCardDisenabled();
         BtnCloseCardEnabled();
 
-        ImgCurrentCard.gameObject.SetActive(false);
-        ImgCurrentCard.color = currentCard.color;
+        /*currentCard.transform.localScale = new Vector3(1, 1, 1);
+        currentCard.transform.position = player.transform.position;*/
 
         isCardActive = true;
     }
 
     public void CloseCard()
     {
+        cardClosePlayer.Play();
+
         isCardActive = false;
 
-        currentCard.gameObject.SetActive(false);
+        currentCard.SetActive(false);
 
         BtnCloseCardDisenabled() ;
 
-        ImgCurrentCard.gameObject.SetActive(true);
-        ImgCurrentCard.color = currentCard.color;
+        //smallCurrentCard.gameObject.SetActive(true);
+        //smallCurrentCard.sprite = currentCard.GetComponent<SpriteRenderer>().sprite;
+
+        /*currentCard.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        currentCard.transform.position = new Vector3(player.transform.position.x + 25, player.transform.position.y + 10);*/
 
         buttonManager.BtnPutEnabled();
 

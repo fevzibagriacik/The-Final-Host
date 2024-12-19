@@ -38,6 +38,11 @@ public class GravestoneManager : MonoBehaviour
 
     Color backgroundColor;
 
+    public AudioSource buyPlayer;
+    public AudioSource eatPlayer;
+    public AudioSource firePlayer;
+    public AudioSource radioactivePlayer;
+
     private void Start()
     {
         //graves = new GameObject[9];
@@ -193,6 +198,7 @@ public class GravestoneManager : MonoBehaviour
 
                     if (holdGluttonApplyed[i] == 1)
                     {
+                        eatPlayer.Play();
                         Transform grave = graves[i].gameObject.transform.Find("Coffin");
                         grave.tag = "Normal";
                         // graves[i].transform.Find("EPressableArea").transform.Find("Canvas").transform.Find("btnPut").GetComponent<Button>().interactable = true;
@@ -209,6 +215,7 @@ public class GravestoneManager : MonoBehaviour
                     Transform poison = graves[i].transform.Find("Poison");
                     if (burnt.tag == "Burnt")
                     {
+                        firePlayer.Play();
                         poison.gameObject.SetActive(false);
                         burnt.gameObject.SetActive(true);
                     }
@@ -220,6 +227,7 @@ public class GravestoneManager : MonoBehaviour
                     Transform poison = graves[i].transform.Find("Poison");
                     if (poison.tag == "Poison")
                     {
+                        radioactivePlayer.Play();
                         poison.gameObject.SetActive(true);
                         burnt.gameObject.SetActive(false);
                     }
@@ -234,6 +242,8 @@ public class GravestoneManager : MonoBehaviour
     {
         if (cardManager.score >= burntPrice)
         {
+            buyPlayer.Play();
+            firePlayer.Stop();
 
             cardManager.score -= burntPrice;
             cardManager.txtScore.text = cardManager.score.ToString();
@@ -270,6 +280,9 @@ public class GravestoneManager : MonoBehaviour
     {
         if(cardManager.score >= radyoactivePrice)
         {
+            buyPlayer.Play(); 
+            radioactivePlayer.Stop();
+
             cardManager.score -= radyoactivePrice;
             cardManager.txtScore.text = cardManager.score.ToString();
             isDeletedPoison = true;

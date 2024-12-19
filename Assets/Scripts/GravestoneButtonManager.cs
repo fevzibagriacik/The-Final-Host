@@ -14,6 +14,8 @@ public class GravestoneButtonManager : MonoBehaviour
 
     public GravestoneManager gm;
 
+    public AudioSource graveStonePlayer;
+
     public bool hasCoffin = false;
 
     public int whichGraveAmIIn = -1;
@@ -65,6 +67,7 @@ public class GravestoneButtonManager : MonoBehaviour
 
     public void ClickBtnPut()
     {
+        graveStonePlayer.Play();
         for (int i = 0; i < gm.graves.Length; i++) 
         {
             if(gm.graves[i].transform.position == gameObject.transform.position)
