@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - GravestoneB
+  - Card
+  - Normal
+  - Rich
+  - Radioactive
+  - Poison
+  - Burnt
+  - Glutton
   layers:
   - Default
   - TransparentFX
