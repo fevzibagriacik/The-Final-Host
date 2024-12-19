@@ -8,7 +8,7 @@ public class GravestoneButtonManager : MonoBehaviour
     public GameObject graveStone;
 
     public CardManager cardManager;
-    public GravestoneManager gravestoneManager;
+    //public GravestoneManager gravestoneManager;
 
     public Button btnPut;
 
