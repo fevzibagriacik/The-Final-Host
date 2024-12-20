@@ -2,11 +2,14 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 public class GravestoneManager : MonoBehaviour
 {
     public GameObject[] graves;
+
+    public GameObject gameOverScreen;
 
     public float neighborDistance = 10f;
 
@@ -42,6 +45,8 @@ public class GravestoneManager : MonoBehaviour
     public AudioSource eatPlayer;
     public AudioSource firePlayer;
     public AudioSource radioactivePlayer;
+
+    public Button btnGameOver;
 
     private void Start()
     {
@@ -312,5 +317,18 @@ public class GravestoneManager : MonoBehaviour
         {
             return;
         }
+    }
+
+    public void ShowGameOverScene()
+    {
+        cardManager.btnCloseCard.interactable = false;
+        cardManager.btnNextCard.interactable = false;
+        btnGameOver.interactable = false;
+        gameOverScreen.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
