@@ -242,9 +242,13 @@ public class GravestoneManager : MonoBehaviour
     {
         if (cardManager.score >= burntPrice)
         {
+            DeleteRadioactive();
+            radioactivePlayer.Stop();
+
             buyPlayer.Play();
             firePlayer.Stop();
 
+            cardManager.score += radyoactivePrice;
             cardManager.score -= burntPrice;
             cardManager.txtScore.text = cardManager.score.ToString();
             isDeletedBurnt = true;
