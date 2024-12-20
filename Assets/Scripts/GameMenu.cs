@@ -17,8 +17,4 @@ public class GameMenu : MonoBehaviour
         PlayerPrefs.Save();
         SceneManager.LoadScene("GameScene");
     }
-    public void starttt()
-    {
-        SceneManager.LoadScene("GameScene");
-    }
 }
